@@ -4,7 +4,7 @@ let intentos = 1;
 let numUsu = 0;
 let palabra = "vez";
 
-while (condition) {
+while (numUsu != secretNum) {
   numUsu = prompt("Me indicas un número entre 1 y 10 por favor:");
   console.log(numUsu);
   if (numUsu == secretNum) {
