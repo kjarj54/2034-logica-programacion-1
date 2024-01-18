@@ -2,14 +2,15 @@ alert("Hello world!");
 let secretNum = 5;
 let intentos = 1;
 let numUsu = 0;
-let palabra = "vez";
+//let palabra = "vez";
+let maximosIntentos = 3;
 
 while (numUsu != secretNum) {
   numUsu = prompt("Me indicas un número entre 1 y 10 por favor:");
   console.log(numUsu);
   if (numUsu == secretNum) {
     //cumple
-    alert(`Acertaste, el número es: ${numUsu}.  Lo hiciste en ${intentos} ${palabraVeces}`);
+    alert(`Acertaste, el número es: ${numUsu}.  Lo hiciste en ${intentos} ${intentos == 1 ? 'vez' : 'veces' }`);
   } else {
     if(numUsu > secretNum){
       alert("El número es menor");
@@ -18,9 +19,13 @@ while (numUsu != secretNum) {
       alert("El número es mayor");
     }
     intentos++;
-    if (intentos > 1) {
-      palabra = "veces";
-    }
+    // if (intentos > 1) {
+    //   palabra = "veces";
+    // }
+    if (intentos > maximosIntentos) {
+      alert(`Llegaste al número máximo de ${maximosIntentos} intentos`);
+      break;
+  }
   }
 }
 
